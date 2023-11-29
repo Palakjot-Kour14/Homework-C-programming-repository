@@ -1,0 +1,41 @@
+#include <stdio.h>
+int main(){
+    int evenSum = 0;
+    int oddSum = 0;
+
+    // Arrays to store results
+    int evenArray[5]; // Size 5 for even numbers 2, 4, 6, 8, 10
+    int oddArray[5];  // Size 5 for odd numbers 1, 3, 5, 7, 9
+
+    int evenIndex = 0;
+    int oddIndex = 0;
+
+    for (int i = 1; i <= 10; i++) {
+        if (i % 2 == 0) {
+            // Even number
+            evenSum += i;
+            evenArray[evenIndex] = i;
+            evenIndex++;
+        } else {
+            // Odd number
+            oddSum += i;
+            oddArray[oddIndex] = i;
+            oddIndex++;
+        }
+    }
+
+    // Display results
+    printf("Even numbers: ");
+    for (int i = 0; i < evenIndex; i++) {
+        printf("%d ", evenArray[i]);
+    }
+    printf("\nSum of even numbers: %d\n", evenSum);
+
+    printf("\nOdd numbers: ");
+    for (int i = 0; i < oddIndex; i++) {
+        printf("%d ", oddArray[i]);
+    }
+    printf("\nSum of odd numbers: %d\n", oddSum);
+
+    return 0;
+}
